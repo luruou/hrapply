@@ -1,0 +1,90 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="ApplyPromote.MasterPage" %>
+
+<%@ Register Src="~/UserControl/Language.ascx" TagPrefix="uc1" TagName="Language" %>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>臺北醫學大學--教師新聘升等系統
+    </title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/all.min.css" rel="stylesheet" />
+    <link href="~/Content/mdb-4.0.0_colors.min.css" rel="stylesheet" />
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body class="skin-1">
+    <form id="form1" runat="server">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <a class="navbar-brand sys-name font-weight-bold" href="#">
+                <!--logo圖-->
+                <img alt="" id="logo" src="image/Logo.png" width="130" />
+                <!--系統名稱-->
+                教師新聘升等系統
+            </a>
+
+            <!--navbar開始-->
+            <div class="navbar-collapse offcanvas-collapse" id="navbarSupportedContent">
+                <asp:Panel ID="panelManage" runat="server" Visible="false">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a href="ManageList.aspx" runat="server" id="A1" accesskey="main-menu3" class="nav-link">簽核&審查</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="CandidateAuditor.aspx" runat="server" id="A2" accesskey="main-menu3" class="nav-link">人才資庫</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="UnderTake.aspx" runat="server" id="A4" accesskey="main-menu3" class="nav-link">承辦人設定</a>
+                        </li>
+                    </ul>
+                </asp:Panel>
+            </div>
+            <!--navbar 結束-->
+            <uc1:Language runat="server" ID="Language" />
+            <asp:Label ID="lb_LoginNM" runat="server" Visible="false" Width="20%" Style="color: white; font-size: 23px" />
+            <ul class="nav navbar-nav float-xs-right">
+                <li class="nav-item">
+                    <asp:LinkButton ID="lkb_logout" runat="server" Text="退出本系統" OnClick="lkb_logout_Click" class="btn btn-large btn-danger" />
+                </li>
+            </ul>
+        </nav>
+
+        <div class="" style="padding-bottom: 100px">
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+
+    </form>
+    <!-- 頁腳 -->
+    <div class="footer fixed-bottom mt-3">
+        <label class="small pt-2 text-center">
+            業務原則與操作問題：請洽人資處 林小姐 2028。如有資料疑義，請向所屬業務單位洽詢。
+            障礙排除請至<a href="http://glbsys.tmu.edu.tw/oitmanagement/login.aspx" style="color: white">資訊服務平台</a><br />
+            臺北醫學大學資訊處製作 Copyright © 2022 教師新聘升等系統。更新日期：2022/06/13 
+        </label>
+    </div>
+    <!-- 頁腳end -->
+
+    <div class="toolbar">
+        <ul class="list-unstyled">
+            <li class="toolbar-item">
+                <a href="#" class="top btn btn-dark" data-toggle="tooltip" data-original-title="Top"><i class="fas fa-arrow-up"></i></a>
+            </li>
+        </ul>
+    </div>
+    <div id="backDrop" class=""></div>
+
+    <script type="text/javascript" src="Scripts/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="Scripts/popper.min.js"></script>
+    <script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
+</body>
+</html>

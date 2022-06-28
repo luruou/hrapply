@@ -1,0 +1,553 @@
+﻿/*body {
+    font-family: 微軟正黑體, Calibri;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #eac100;
+    color: white;
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+img {
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor;
+}
+
+.system-name {
+
+
+}*/
+
+
+html,
+body {
+    overflow-x: hidden; /* Prevent scroll on narrow devices */
+}
+
+body {
+    font-family: 微軟正黑體, Calibri;
+    color: #333;
+    /*min-height: 75rem;*/ /*for fixed top navbar*/
+    padding-top: 4.5rem; /*for fixed top navbar*/
+}
+
+.body-content {
+    min-height: 50rem;
+}
+
+.fade3s {
+    transition: opacity .3s linear;
+}
+
+@media (max-width: 992px) {
+    .offcanvas-collapse {
+        position: fixed;
+        /*top: 56px;*/ /* Height of navbar */
+        top: 72.33px;
+        bottom: 0;
+        left: 100%;
+        width: 100%;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        overflow-y: auto;
+        visibility: hidden;
+        /*background-color: #343a40;*/
+        transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+    }
+
+        .offcanvas-collapse.open {
+            visibility: visible;
+            transform: translateX(-260px); /*選單滑出在螢幕的寬度，也可以改用%*/
+        }
+
+    .skin-1 .offcanvas-collapse {
+        background-color: #343a40;
+    }
+
+    .skin-2 .offcanvas-collapse {
+        background-color: #ffeea0;
+    }
+
+    .skin-3 .offcanvas-collapse {
+        background-color: #d9c5c5;
+    }
+
+    .skin-4 .offcanvas-collapse {
+        background-color: #343a40;
+    }
+
+
+    .body-content {
+        min-height: 75rem;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .body-content {
+        min-height: 85rem;
+    }
+
+    .skin-1 .offcanvas-collapse {
+        background-color: #343a40;
+    }
+
+    .skin-2 .offcanvas-collapse {
+        background-color: #ffeea0;
+    }
+
+    .skin-3 .offcanvas-collapse {
+        background-color: #d9c5c5;
+    }
+
+    .skin-4 .offcanvas-collapse {
+        background-color: #343a40;
+    }
+}
+
+
+/*@media(min-width:768px){
+
+    #sideBar {
+        max-width: 250px;
+    }
+
+}*/
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+.footer {
+    /*position: fixed;*/
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/*讓圖銳利*/
+img {
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor;
+}
+
+ul li, ol li {
+    line-height: 30px;
+}
+
+/*Back to top*/
+.top {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.opacity-50{
+    opacity: 0.5!important;
+}
+
+/* shortcut toolbar */
+.toolbar {
+    position: fixed;
+    bottom: 4em;
+    right: 0.5rem;
+    /*background-color: red;*/
+    opacity: 1;
+    filter: alpha(opacity=1);
+    z-index: 9999;
+}
+
+
+.showThis {
+    opacity: 1;
+    filter: alpha(opacity=1);
+}
+
+.skin-1 .bg-main {
+    background-color: #005ab5;
+}
+
+.skin-2 .bg-main {
+    background-color: #eac001;
+}
+
+.skin-3 .bg-main {
+    background-color: #f17675;
+}
+
+.skin-4 .bg-main {
+    background-color: #000;
+}
+
+.skin-1 .text-main {
+    color: #005ab5;
+}
+
+.skin-2 .text-main {
+    color: #eac001;
+}
+
+.skin-3 .text-main {
+    color: #f17675;
+}
+
+.skin-4 .text-main {
+    color: #000;
+}
+
+.skin-1 .sys-name {
+    color: #fff;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.skin-1 #logo {
+}
+
+.skin-1 .footer {
+    background-color: #005ab5;
+    color: #fff;
+}
+
+.skin-1 .navbar {
+    background-color: #005ab5;
+    color: #fff;
+    z-index: 1055;
+}
+
+.skin-1 .navbar-nav .nav-link {
+    /*padding-right: .25rem;
+    padding-left: .25rem;*/
+    color: #fff;
+}
+
+
+
+.skin-2 .navbar {
+    background-color: #eac100;
+    color: #000;
+    z-index: 1055;
+}
+
+.skin-2 .sys-name {
+    color: #000;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.skin-2 #logo {
+}
+
+.skin-2 .footer {
+    background-color: #eac100;
+    color: #000;
+}
+
+.skin-2 .navbar-nav .nav-link {
+    /*padding-right: .25rem;
+    padding-left: .25rem;*/
+    color: #000;
+}
+
+.skin-2 .nav-pills .nav-link.active,
+.skin-2 .nav-pills .show > .nav-link {
+    color: #000;
+    background-color: #eac001;
+}
+
+.skin-3 .navbar {
+    background-color: #ff7575;
+    z-index: 1055;
+}
+
+.skin-3 .sys-name {
+    color: #000;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.skin-3 #logo {
+}
+
+.skin-3 .footer {
+    background-color: #ff7575;
+    color: #000;
+}
+
+
+.skin-3 .navbar-nav .nav-link {
+    /*padding-right: .25rem;
+    padding-left: .25rem;*/
+    color: #000;
+}
+
+.skin-3 .nav-pills .nav-link.active,
+.skin-3 .nav-pills .show > .nav-link {
+    color: #000;
+    background-color: #f17675;
+}
+
+
+.skin-4 .sys-name {
+    color: #fff;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.skin-4 #logo {
+}
+
+.skin-4 .footer {
+    background-color: #000;
+    color: #fff;
+}
+
+.skin-4 .navbar {
+    background-color: #000;
+    color: #fff;
+    z-index: 1055;
+}
+
+.skin-4 .navbar-nav .nav-link {
+    /*padding-right: .25rem;
+    padding-left: .25rem;*/
+    color: #fff;
+}
+
+.skin-4 .nav-pills .nav-link.active,
+.skin-4 .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #0d6efd;
+}
+
+
+
+.nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+}
+
+    .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        color: rgba(255, 255, 255, .75);
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+
+
+/*==========bootstrap 5.x 的sidebar 開始=====================*/
+
+.drop-links {
+    overflow: auto;
+    font-weight: 600
+}
+
+@media (min-width: 768px) {
+    .drop-links {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 5rem;
+        display: block !important;
+        height: calc(100vh - 7rem);
+        padding-left: .25rem;
+        margin-left: -.25rem;
+        overflow-y: auto;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .drop-links > ul {
+        padding: .5rem .75rem;
+        background-color: #f8f9fa;
+        border-bottom: 1px solid #e9ecef
+    }
+}
+
+.drop-links a {
+    padding: .25rem .5rem;
+    padding-left: 2rem;
+    /*margin-top: .125rem;
+    margin-left: 1.25rem;*/
+    color: rgba(0,0,0,0.65);
+    text-decoration: none;
+}
+
+    .drop-links a:hover, .drop-links a:focus {
+        color: rgba(0,0,0,0.85);
+        background-color: rgba(241,241,241,0.9);
+    }
+
+.drop-links .btn {
+    padding: .25rem .5rem;
+    font-weight: 600;
+    color: rgba(0,0,0,0.65);
+    background-color: transparent;
+    border: 0
+}
+
+    .drop-links .btn:hover, .drop-links .btn:focus {
+        color: rgba(0,0,0,0.85);
+        background-color: rgba(241,241,241,0.9);
+    }
+
+    .drop-links .btn:focus {
+        box-shadow: 0 0 0 1px rgba(185,185,185,0.7);
+    }
+
+    .drop-links .btn::after {
+        width: 1.25em;
+        line-height: 0;
+        content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%280,0,0,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+        transition: transform 0.35s ease;
+        transform-origin: .5em 50%
+    }
+
+@media (prefers-reduced-motion: reduce) {
+    .drop-links .btn::before {
+        transition: none
+    }
+}
+
+.drop-links .btn[aria-expanded="true"] {
+    color: rgba(0,0,0,0.85)
+}
+
+    .drop-links .btn[aria-expanded="true"]::after {
+        transform: rotate(90deg)
+    }
+
+.drop-links .active {
+    font-weight: 600;
+    color: rgba(0,0,0,0.85)
+}
+/*==========bootstrap 5.x 的sidebar 結束=====================*/
+
+/*==========bootstrap 4.x 的sidebar 開始=====================*/
+
+.bd-sidebar {
+    -ms-flex-order: 0;
+    order: 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1)
+}
+
+@media (min-width: 768px) {
+    .bd-sidebar {
+        border-right: 1px solid rgba(0,0,0,0.1)
+    }
+
+    @supports ((position: -webkit-sticky) or (position: sticky)) {
+        .bd-sidebar {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 4rem;
+            z-index: 1000;
+            height: calc(100vh - 4rem)
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .bd-sidebar {
+        -ms-flex: 0 1 320px;
+        flex: 0 1 320px
+    }
+}
+
+.bd-links {
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-top: 1px solid rgba(0,0,0,0.05)
+}
+
+@media (min-width: 768px) {
+    @supports ((position: -webkit-sticky) or (position: sticky)) {
+        .bd-links {
+            max-height: calc(100vh - 9rem);
+            overflow-y: auto
+        }
+    }
+}
+
+
+
+.bd-sidenav {
+    display: none
+}
+
+.bd-toc-link {
+    display: block;
+    padding: .25rem 1.5rem;
+    font-weight: 600;
+    color: rgba(0,0,0,0.65)
+}
+
+    .bd-toc-link:hover {
+        color: rgba(0,0,0,0.85);
+        text-decoration: none
+    }
+
+.bd-toc-item.active {
+    margin-bottom: 1rem
+}
+
+    .bd-toc-item.active:not(:first-child) {
+        margin-top: 1rem
+    }
+
+    .bd-toc-item.active > .bd-toc-link {
+        color: rgba(0,0,0,0.85)
+    }
+
+        .bd-toc-item.active > .bd-toc-link:hover {
+            background-color: transparent
+        }
+
+    .bd-toc-item.active > .bd-sidenav {
+        display: block
+    }
+
+.bd-sidebar .nav > li > a {
+    display: block;
+    padding: .25rem 1.5rem;
+    font-size: 90%;
+    color: rgba(0,0,0,0.65)
+}
+
+    .bd-sidebar .nav > li > a:hover {
+        color: rgba(0,0,0,0.85);
+        text-decoration: none;
+        background-color: transparent
+    }
+
+.bd-sidebar .nav > .active > a, .bd-sidebar .nav > .active:hover > a {
+    font-weight: 600;
+    color: rgba(0,0,0,0.85);
+    background-color: transparent
+}
+/*==========bootstrap 4.x 的sidebar 結束=====================*/

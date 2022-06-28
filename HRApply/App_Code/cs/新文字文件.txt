@@ -1,0 +1,6 @@
+                NewPassword = RandomPassword();
+                DESCrypt DES = new DESCrypt();
+                pwdEncrypt = DES.Encrypt(NewPassword);
+
+ 		DESCrypt DES = new DESCrypt();
+                pwdDecrypt = DES.Encrypt(pwd);

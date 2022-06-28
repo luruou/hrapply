@@ -1,0 +1,261 @@
+/*-------------------------------------------------------------------------- Signin Box */
+html {
+    position: relative;
+    min-height: 100%;
+   
+}
+
+body {
+    font-family: Microsoft JhengHei, "微軟正黑體", Microsoft Yahei, "微軟雅黑體", Arial, sans-serif;
+    margin-bottom: 60px;
+    
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    /* font-weight:800; */
+}
+
+.table {
+    background-color:#ffffff;
+}
+
+.signin_box {
+    /*width: 320px;*/
+    max-width: 700px;
+    min-width: 264px;
+    /*width:600px;*/
+    background: #F7F6F2;
+    padding: 30px;
+    text-align: left;
+    margin-right: auto;
+    margin-left: auto;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    position: relative;
+}
+
+    .signin_box h1 {
+        font-size: 16px;
+        line-height: normal;
+        color: #000000;
+        text-transform: uppercase;
+        font-weight: 600;
+        /* border-bottom: 1px solid #fff; */
+        padding-bottom: 20px;
+        padding: 10px 10px;
+        margin-bottom: 15px;
+        background-color: rgb(201, 200, 202);
+    }
+
+.page-header {
+    max-width: 760px;
+    min-width: 264px;
+    padding-bottom: 9px;
+    padding-top: 5px;
+    margin: 40px 0 0px;
+    margin-right: auto;
+    margin-left: auto;
+    border-bottom: 0px solid #eee;
+    text-align: center;
+    background: #6A6CB3;
+    color: #fff;
+}
+
+@media (max-width:560px) {
+
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+        font-size: 20px;
+    }
+}
+
+@media(min-width:720px) {
+    .signin_box .left-content {
+        position: relative;
+        top: 0px;
+    }
+
+    .signin_box .left-content {
+        padding-right: 340px;
+        left: 0;
+        padding-bottom: 50px;
+    }
+
+    /*.signin_box .left-content {
+        padding-right: 340px;
+        width:280px;
+        left: 0;
+        padding-bottom:50px;
+    }*/
+
+    .signin_box .right-content {
+        /*position:absolute;*/
+        z-index: 1;
+        right: 10px;
+        top: 20px;
+    }
+    /*.signin_box .right-content {
+       background-color:#fff;
+       padding:10px;
+       width:320px;
+       float:right;
+       margin-top:-300px;
+    }*/
+
+
+    .signin_box .right-content {
+        background-color: #fff;
+        padding: 10px;
+    }
+
+        .signin_box .right-content .login-box {
+            /* width: 300px; */
+            padding: 0 20px;
+        }
+}
+
+
+
+
+/*.help {
+ 
+}*/
+
+
+.signin_box #signin-content-container {
+    left: 0;
+}
+
+.signin_box .extra {
+    color: #666;
+    display: block;
+    margin-bottom: 15px;
+}
+
+    .signin_box .extra a {
+        color: #999;
+    }
+
+        .signin_box .extra a:hover {
+            text-decoration: underline;
+        }
+
+.extra_signup {
+    width: 420px;
+    margin-top: 25px;
+    color: #fff;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+    .extra_signup a {
+        color: #fff;
+        font-weight: 600;
+    }
+
+        .extra_signup a:hover {
+            text-decoration: underline;
+        }
+
+.signin_box .btn.signin {
+    margin-top: 20px;
+    width: 100%;
+    padding: 0;
+}
+
+
+
+
+
+/*------------------------------------------------------------------------- buttons */
+.btn-lightblue {
+    display: inline-block;
+    height: 35px;
+    line-height: 5px;
+    /*color: #fff;*/
+    font-size: 1em;
+    min-width: 120px;
+    text-align: center;
+    cursor: default;
+    /* border: 1px solid #8EC919; */
+    font-weight: 600;
+    text-transform: uppercase;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(162, 211, 231);
+    -webkit-box-shadow: 0 0 0 rgba(255, 255, 255, 0), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    -moz-box-shadow: 0 0 0 rgba(255, 255, 255, 0), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    -webkit-transition: all 0.05s linear;
+    -moz-transition: all 0.05s linear;
+    transition: all 0.05s linear;
+}
+
+    .btn-lightblue:hover {
+        /*background-color: #9DCF38;*/
+        /* border-color: #8EC919; */
+        -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+
+    .btn-lightblue:active {
+        /*background-color: #9DCF38;*/
+        border-color: #8EC919;
+        -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 1), inset 0 2px 3px rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 1), inset 0 2px 3px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 1px 0 rgba(255, 255, 255, 1), inset 0 2px 3px rgba(0, 0, 0, 0.1);
+    }
+
+
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    background-color: #f5f5f5;
+}
+
+    .footer .container {
+        width: auto;
+        max-width: 680px;
+        padding: 0 15px;
+    }
+
+        .footer .container .text-muted {
+            margin: 20px 0;
+        }
+
+
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+@media (max-width:560px) {
+
+    .btn {
+        min-width: 90px;
+    }
+}
